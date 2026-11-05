@@ -1,0 +1,12 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "functions": { "api/*.js": { "includeFiles": "{servers.json,catalog.json.gz}" } },
+  "rewrites": [{ "source": "/mcp/compacto", "destination": "/api/mcp?mode=compact" }, { "source": "/mcp", "destination": "/api/mcp" }],
+  "headers": [ { "source": "/(.*)", "headers": [
+    { "key":"X-Content-Type-Options", "value":"nosniff" },
+    { "key":"Referrer-Policy", "value":"no-referrer" },
+    { "key":"X-Frame-Options", "value":"DENY" },
+    { "key":"Content-Security-Policy", "value":"default-src 'self'; style-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self' data:; base-uri 'none'; frame-ancestors 'none'" }
+  ] } ]
+}

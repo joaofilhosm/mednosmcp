@@ -1,0 +1,173 @@
+[
+  {
+    "id": "aihot",
+    "name": "AIHot",
+    "url": "https://aihot-mcp.vercel.app/mcp",
+    "category": "Pesquisa"
+  },
+  {
+    "id": "medicina",
+    "name": "Medicina MCP",
+    "url": "https://medicina-mcp.vercel.app/api/mcp",
+    "category": "Medicina"
+  },
+  {
+    "id": "web_search",
+    "name": "MCP Web Search",
+    "url": "https://mcp-web-search-tool.vercel.app/api/mcp",
+    "category": "Pesquisa"
+  },
+  {
+    "id": "cirurgia",
+    "name": "Cirurgia MedNos",
+    "url": "https://cirurgia.mednos.app/api/mcp",
+    "category": "Medicina"
+  },
+  {
+    "id": "sse_images",
+    "name": "SSE Images",
+    "url": "https://sse-images.joaosmfilho.org/mcp",
+    "category": "Imagens"
+  },
+  {
+    "id": "kb_mednos",
+    "name": "Base de conhecimento MedNos",
+    "url": "https://kb.mednos.app/mcp",
+    "category": "Medicina"
+  },
+  {
+    "id": "leis",
+    "name": "Leis MCP",
+    "url": "https://leis-mcp-jsdmf.vercel.app/mcp",
+    "category": "Legislação"
+  },
+  {
+    "id": "anvisa",
+    "name": "ANVISA Bulário",
+    "url": "https://mcp-anvisa-bulario-api.vercel.app/api/mcp",
+    "category": "Medicamentos"
+  },
+  {
+    "id": "saude_br",
+    "name": "Saúde BR",
+    "url": "https://mcp-saude-br-api.vercel.app/api/mcp",
+    "category": "Medicina"
+  },
+  {
+    "id": "morphic",
+    "name": "Morphic",
+    "url": "https://morphic-mcp.vercel.app/mcp",
+    "category": "Pesquisa"
+  },
+  {
+    "id": "neofax",
+    "name": "NeoFax MedNos",
+    "url": "https://neofax.mednos.app/api/public/mcp",
+    "category": "Medicina"
+  },
+  {
+    "id": "web_images",
+    "name": "Web Image Search",
+    "url": "https://web-image-search.vercel.app/api/mcp",
+    "category": "Imagens"
+  },
+  {
+    "id": "pesq_saude",
+    "name": "Pesquisa em Saúde",
+    "url": "https://pesq-saude.joaosmfilho.org/mcp",
+    "category": "Pesquisa",
+    "aliases": [
+      "https://pesquisa-saude.vercel.app/api/mcp"
+    ]
+  },
+  {
+    "id": "pixelrag",
+    "name": "PixelRAG",
+    "url": "https://pixelrag-mcp.vercel.app/mcp",
+    "category": "Pesquisa"
+  },
+  {
+    "id": "plantao",
+    "name": "Plantão MedNos",
+    "url": "https://plantao.mednos.app/functions/mcp",
+    "category": "Medicina"
+  },
+  {
+    "id": "search_live",
+    "name": "Search Live",
+    "url": "https://search-live-phi.vercel.app/mcp",
+    "category": "Pesquisa"
+  },
+  {
+    "id": "pubmed",
+    "name": "PubMed",
+    "url": "https://pubmed.caseyjhand.com/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "pubchem",
+    "name": "PubChem",
+    "url": "https://pubchem.caseyjhand.com/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "openalex",
+    "name": "OpenAlex",
+    "url": "https://openalex.caseyjhand.com/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "omnipath",
+    "name": "OmniPath",
+    "url": "https://explore.omnipathdb.org/api/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "helena_noodle",
+    "name": "Helena Noodle",
+    "url": "https://api.helena.bio/noodle/v1/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "medical",
+    "name": "Medical MCP",
+    "url": "https://medical.sidneybissoli.com/mcp",
+    "category": "Medicina"
+  },
+  {
+    "id": "helena_ask",
+    "name": "Helena Ask",
+    "url": "https://api.helena.bio/ask/v1/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "firecrawl",
+    "name": "Firecrawl",
+    "url": "https://mcp.firecrawl.dev/v2/mcp",
+    "category": "Pesquisa"
+  },
+  {
+    "id": "dailymed",
+    "name": "DailyMed",
+    "url": "https://gateway.pipeworx.io/dailymed/mcp",
+    "category": "Medicamentos"
+  },
+  {
+    "id": "crossref",
+    "name": "Crossref",
+    "url": "https://crossref.caseyjhand.com/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "chembl",
+    "name": "ChEMBL",
+    "url": "https://chembl.caseyjhand.com/mcp",
+    "category": "Pesquisa científica"
+  },
+  {
+    "id": "bgpt",
+    "name": "BGPT",
+    "url": "https://bgpt.pro/mcp/stream",
+    "category": "Pesquisa científica"
+  }
+]

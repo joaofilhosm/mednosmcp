@@ -1,0 +1,10 @@
+import { createRequire } from 'node:module';
+import { readFileSync } from 'node:fs';
+import { gunzipSync } from 'node:zlib';
+import { validateRegistry } from './registry.js';
+const require = createRequire(import.meta.url);
+export const servers = require('../servers.json');
+export const catalog = JSON.parse(gunzipSync(readFileSync(new URL('../catalog.json.gz',import.meta.url))).toString('utf8'));
+validateRegistry(servers);
+export const serverMap = new Map(servers.map(server => [server.id, server]));
+export const toolMap = new Map(catalog.tools.map(tool => [tool.definition.name, tool]));
