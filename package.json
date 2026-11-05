@@ -11,7 +11,9 @@
     "check:registry": "node scripts/registry.js check",
     "check:url": "node scripts/registry.js find",
     "add:mcp": "node scripts/registry.js add",
-    "refresh": "node scripts/refresh.js"
+    "refresh": "node scripts/refresh.js",
+    "check:catalog": "node scripts/check-catalog.js",
+    "build": "npm run check:registry && npm run check:catalog && npm test"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "1.30.0",

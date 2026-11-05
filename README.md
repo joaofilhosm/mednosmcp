@@ -38,3 +38,5 @@ Os servidores de origem podem mudar, exigir autenticação, impor cotas ou ficar
 ## Deploy
 
 Este projeto usa funções Node.js na Vercel. Para publicar a partir de um checkout autorizado: `vercel link`, `vercel deploy --prod`. Execute `npm run refresh` antes do deploy para atualizar as ferramentas. Para verificação após o deploy: `node scripts/smoke.js https://mednosmcp.vercel.app`.
+
+A cada push e pull request, o GitHub executa os testes e valida o cadastro e o catálogo. O build da Vercel também executa essas verificações antes da publicação: URLs ou IDs duplicados, catálogo desatualizado e inconsistências impedem o novo deploy, preservando a versão anteriormente publicada. Para alterar as origens, edite pelo script de cadastro, execute `npm run refresh`, revise os arquivos e faça o commit de `servers.json`, `catalog.json` e `catalog.json.gz` juntos.
