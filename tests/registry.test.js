@@ -36,3 +36,11 @@ test('reconhece endereços alternativos como o mesmo servidor', () => {
   assert.equal(findByUrl(servers,'https://PESQUISA-SAUDE.vercel.app/api/mcp/').id,'pesq_saude');
   assert.throws(()=>validateRegistry([...servers,{id:'other',name:'Outro',url:'https://pesquisa-saude.vercel.app/api/mcp'}]),/URL duplicada/);
 });
+
+import { authHeaders } from '../src/upstream.js';
+test('authHeaders lê a chave só do ambiente', () => {
+  const server = { auth: { header: 'x-api-key', env: 'FOO_KEY' } };
+  assert.deepEqual(authHeaders(server, { FOO_KEY: 'segredo' }), { 'x-api-key': 'segredo' });
+  assert.deepEqual(authHeaders(server, {}), {});
+  assert.deepEqual(authHeaders({}, { FOO_KEY: 'x' }), {});
+});

@@ -13,6 +13,14 @@ export function publicToolName(serverId, originalName) {
   return prefix + '__' + base.slice(0, 64 - prefix.length - 11) + '_' + hash;
 }
 
+// Credenciais ficam só em variáveis de ambiente (nunca no repositório): server.auth = { header, env, prefix? }.
+export function authHeaders(server, env = process.env) {
+  const a = server.auth;
+  if (!a) return {};
+  const value = env[a.env];
+  return value ? { [a.header]: (a.prefix || '') + value } : {};
+}
+
 function classify(error) {
   const s = String(error?.message || error);
   if (/401|403|unauthorized|forbidden|no auth provider|authentication required/i.test(s)) return 'auth_required';
@@ -33,7 +41,9 @@ export async function withUpstream(server, fn, timeoutMs = 12000) {
     const client = new Client(protocol, { capabilities: {} });
     let connected = false;
     try {
-      const opts = { requestInit: { signal: controller.signal } };
+      const headers = authHeaders(server);
+      const opts = { requestInit: { signal: controller.signal, headers } };
+      if (mode === 'sse') opts.eventSourceInit = { fetch: (url, init) => fetch(url, { ...init, headers: { ...Object.fromEntries(new Headers(init?.headers)), ...headers } }) };
       const transport = mode === 'streamable-http'
         ? new StreamableHTTPClientTransport(new URL(server.url), opts)
         : new SSEClientTransport(new URL(server.url), opts);

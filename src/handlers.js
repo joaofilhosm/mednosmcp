@@ -7,9 +7,9 @@ import { discover, withUpstream } from './upstream.js';
 const statusDescriptions = {available:'Disponível na última verificação', auth_required:'Exige autenticação', timeout:'Tempo limite excedido', unavailable:'Indisponível ou incompatível'};
 
 export function publicServers() {
-  return servers.map(server => {
+  return servers.map(({auth, ...server}) => {
     const state = catalog.servers.find(s => s.id === server.id) || {};
-    return { ...server, status:state.status || 'unchecked', statusLabel:statusDescriptions[state.status] || 'Ainda não verificado', checkedAt:state.checkedAt || null, transport:state.transport || null, toolCount:state.toolCount || 0 };
+    return { ...server, authConfigurada:Boolean(auth), status:state.status || 'unchecked', statusLabel:statusDescriptions[state.status] || 'Ainda não verificado', checkedAt:state.checkedAt || null, transport:state.transport || null, toolCount:state.toolCount || 0 };
   });
 }
 

@@ -142,7 +142,7 @@
   },
   {
     "id": "firecrawl",
-    "name": "Firecrawl",
+    "name": "Firecrawl (gratuito)",
     "url": "https://mcp.firecrawl.dev/v2/mcp",
     "category": "Pesquisa"
   },
@@ -175,5 +175,15 @@
     "name": "PsiPocket MedNos",
     "url": "https://psi.mednos.app/functions/mcp",
     "category": "Outros"
+  },
+  {
+    "id": "firecrawl_key",
+    "name": "Firecrawl (com chave)",
+    "url": "https://mcp.firecrawl.dev/v2/mcp-oauth",
+    "category": "Pesquisa",
+    "auth": {
+      "header": "x-firecrawl-api-key",
+      "env": "FIRECRAWL_API_KEY"
+    }
   }
 ]

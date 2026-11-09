@@ -20,6 +20,7 @@ export function validateRegistry(servers) {
   const urls = new Map(); const ids = new Set();
   for (const s of servers) {
     if (!s || typeof s.id !== 'string' || !/^[a-z0-9_]{1,24}$/.test(s.id) || !s.name || !s.url || (s.aliases && !Array.isArray(s.aliases))) throw new Error('Entrada inválida: ' + JSON.stringify(s));
+    if (s.auth && (!/^[A-Za-z0-9-]{1,64}$/.test(s.auth.header || '') || !/^[A-Z][A-Z0-9_]{1,63}$/.test(s.auth.env || '') || (s.auth.prefix !== undefined && typeof s.auth.prefix !== 'string'))) throw new Error('Campo auth inválido (use header, env e prefix opcional): ' + s.id);
     if (ids.has(s.id)) throw new Error('ID duplicado: ' + s.id);
     for (const sourceUrl of [s.url, ...(s.aliases || [])]) {
       const url = canonicalUrl(sourceUrl);
