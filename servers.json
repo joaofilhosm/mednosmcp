@@ -169,5 +169,11 @@
     "name": "BGPT",
     "url": "https://bgpt.pro/mcp/stream",
     "category": "Pesquisa científica"
+  },
+  {
+    "id": "psi",
+    "name": "PsiPocket MedNos",
+    "url": "https://psi.mednos.app/functions/mcp",
+    "category": "Outros"
   }
 ]
