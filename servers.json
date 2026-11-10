@@ -185,5 +185,11 @@
       "header": "x-firecrawl-api-key",
       "env": "FIRECRAWL_API_KEY"
     }
+  },
+  {
+    "id": "atlas",
+    "name": "Atlas MedNos",
+    "url": "https://atlas.mednos.app/api/mcp",
+    "category": "Outros"
   }
 ]
