@@ -191,5 +191,16 @@
     "name": "Atlas MedNos",
     "url": "https://atlas.mednos.app/api/mcp",
     "category": "Outros"
+  },
+  {
+    "id": "cf_browser",
+    "name": "Cloudflare Browser Rendering",
+    "url": "https://browser.mcp.cloudflare.com/mcp",
+    "category": "Pesquisa",
+    "auth": {
+      "header": "Authorization",
+      "env": "CLOUDFLARE_BROWSER_TOKEN",
+      "prefix": "Bearer "
+    }
   }
 ]
